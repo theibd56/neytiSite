@@ -74,7 +74,7 @@ body {
     width: 100vw;
     transition: margin 0.8s ease-out;
     padding: 4% 4% 3% 4%;
-    background: url(../images/word-back.png) no-repeat;
+    background: url(../images/background.png) no-repeat;
     background-size: cover;
   }
 
