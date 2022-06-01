@@ -1,0 +1,131 @@
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* при отображении модального окно */
+  .modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+  }
+  /* ширина модального окна и его отступы от экрана */
+  .modal-dialog {
+    /* max-width: 31.3vw; */
+    position: relative;
+    background: #1E1E1E;
+    margin: 0 auto;
+    border: 0.05vw  solid #A245FF;
+    box-shadow: -0.05vw -0.05vw 0.25vw  rgba(162, 69, 255, 0.65), 0.05vw 0.05vw 0.25vw  rgba(162, 69, 255, 0.65);
+    border-radius: 0.6vw;
+    /* position: absolute;
+    top: 35vh;
+    left: 35vw; для отображения модального окна по центру */
+  }
+
+  /* свойства для блока, содержащего контент модального окна */ 
+  .modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0.05vw solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+  }
+
+  /* свойства для заголовка модального окна */
+  .modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 2vw 2vw 0 2vw;
+  }
+  .modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+  
+    font-size: 1.72vw;
+    line-height: 1.2;
+    text-align: left;
+  }
+  /* свойства для кнопки "Закрыть" */
+  .close {
+    float: right;
+    font-size: 1.25vw;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 2vw;
+  }
+  /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+  .close:focus, .close:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+  }
+  /* свойства для блока, содержащего основное содержимое окна */
+  .modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 2vw;
+    overflow: auto;
+  
+    overflow-wrap: break-word;
+    line-height: 1.85714285714286;
+    color: #ffffff;
+    letter-spacing: inherit;
+  }
+
+  .que-item:not(:last-child) {
+    margin-bottom: 5vh;
+  }
+
+  .que-title {
+    font-size: 1.57vw;
+    text-align: left;
+  }
+
+  .que-desc {
+    font-size: 1.05vw;
+    text-align: left;
+  }
